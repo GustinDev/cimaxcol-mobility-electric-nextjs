@@ -19,12 +19,40 @@ const Navbar = (props: Props) => {
             height={18}
             className='object-contain'
           ></Image>
+
+          <CustomButtom
+            title='Inicio'
+            btnType='button'
+            containerStyles='text-primary-blue rounded-full bg-white min-w-[100px]'
+          />
         </Link>
-        <CustomButtom
-          title='Ingresar'
-          btnType='button'
-          containerStyles='text-primary-blue rounded-full bg-white min-w-[130px]'
-        />
+        <div className='flex'>
+          <CustomButtom
+            title='Ingresar'
+            btnType='button'
+            containerStyles='text-primary-blue rounded-full bg-white min-w-[100px]'
+          />
+          <Link
+            className='flex justify center items-center'
+            href='/contact'
+          >
+            <CustomButtom
+              title='Contacto'
+              btnType='button'
+              containerStyles='text-primary-blue rounded-full bg-white min-w-[100px]'
+            />
+          </Link>
+          <Link
+            className='flex justify center items-center'
+            href='/about'
+          >
+            <CustomButtom
+              title='Nosotros'
+              btnType='button'
+              containerStyles='text-primary-blue rounded-full bg-white min-w-[100px]'
+            />
+          </Link>
+        </div>
       </nav>
     </header>
   );

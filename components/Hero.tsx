@@ -10,9 +10,7 @@ const Hero = (props: Props) => {
     <div>
       <div className='hero'>
         <div className='flex-1 pt-36 padding-x'>
-          <h1 className='hero__title'>
-            Cimaxcol Mobility Electric <br /> Motos Eléctricas
-          </h1>
+          <h1 className='hero__title'>Cimaxcol Mobility Electric</h1>
           <h2 className='hero__subtitle'>
             Busca, encuentra y compra la moto de tus sueños.
           </h2>
