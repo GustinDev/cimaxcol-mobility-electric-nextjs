@@ -8,13 +8,13 @@ const Hero = (props: Props) => {
   const handleScroll = () => {};
   return (
     <div>
-      <div className='Hero'>
+      <div className='hero'>
         <div className='flex-1 pt-36 padding-x'>
           <h1 className='hero__title'>
-            Cimaxcol Mobility Electric - Motos Eléctricas.
+            Cimaxcol Mobility Electric <br /> Motos Eléctricas
           </h1>
           <h2 className='hero__subtitle'>
-            Encuentra, compara y compra la moto de tus sueños.
+            Busca, encuentra y compra la moto de tus sueños.
           </h2>
           <CustomButtom
             title='Ver Catálogo'
@@ -30,8 +30,8 @@ const Hero = (props: Props) => {
               fill
               className='object-contain'
             />
-            <div className='hero__image-overlay' />
           </div>
+          <div className='hero__image-overlay' />
         </div>
       </div>
     </div>

@@ -1,11 +1,10 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
+import Navbar from '../components/Navbar';
+import { Footer } from '@/components';
 
 export const metadata = {
   title: 'CME - Motos Eléctricas',
-  description: 'Venta de motos eléctricas de Colombia.',
+  description: 'Venta de motos eléctricas en Colombia.',
 };
 
 export default function RootLayout({
@@ -15,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className='relative'>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
