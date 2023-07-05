@@ -23,7 +23,7 @@ const Hero = (props: Props) => {
         <div className='hero__image-container'>
           <div className='hero__image'>
             <Image
-              src='/hero.png'
+              src='/motorbikes-hero.png'
               alt='HeroImg'
               fill
               className='object-contain'

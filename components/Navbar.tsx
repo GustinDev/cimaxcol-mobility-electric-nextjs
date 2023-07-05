@@ -6,7 +6,7 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   return (
-    <header className='w-full absolute z-10 bg-white'>
+    <header className='w-full fixed top-0 z-10 bg-gray-50 border-b-2 border-blue-400'>
       <nav className='max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4'>
         <Link
           className='flex justify center items-center'
@@ -25,7 +25,7 @@ const Navbar = (props: Props) => {
           <CustomButtom
             title='Inicio'
             btnType='button'
-            containerStyles='text-primary-blue rounded-full  min-w-[100px] hover:font-semibold'
+            containerStyles='text-primary-blue rounded-full  w-[90px] hover:font-semibold '
           />
         </Link>
         <div className='flex'>
@@ -36,7 +36,7 @@ const Navbar = (props: Props) => {
             <CustomButtom
               title='Ingresar'
               btnType='button'
-              containerStyles='text-primary-blue rounded-full  min-w-[100px] hover:font-semibold'
+              containerStyles='text-primary-blue rounded-full  w-[90px] hover:font-semibold'
             />
           </Link>
           <Link
@@ -46,7 +46,7 @@ const Navbar = (props: Props) => {
             <CustomButtom
               title='Contacto'
               btnType='button'
-              containerStyles='text-primary-blue rounded-full  min-w-[100px] hover:font-semibold'
+              containerStyles='text-primary-blue rounded-full  w-[90px] hover:font-semibold'
             />
           </Link>
           <Link
@@ -56,7 +56,7 @@ const Navbar = (props: Props) => {
             <CustomButtom
               title='Nosotros'
               btnType='button'
-              containerStyles='text-primary-blue rounded-full bg-white min-w-[100px] hover:font-semibold'
+              containerStyles='text-primary-blue rounded-full  w-[90px] hover:font-semibold'
             />
           </Link>
         </div>

@@ -4,7 +4,7 @@ type Props = {};
 
 const Login = (props: Props) => {
   return (
-    <div>
+    <div className='flex-1 pt-28 padding-x'>
       <h1>Login</h1>
     </div>
   );
