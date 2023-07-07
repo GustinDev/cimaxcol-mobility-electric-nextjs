@@ -1,8 +1,13 @@
+import { CarProps } from '@/types';
 import React from 'react';
 
-type Props = {};
+interface CardDetailsProps {
+  isOpen: boolean;
+  closeModal: () => void;
+  car: CarProps;
+}
 
-const CardDetails = (props: Props) => {
+const CardDetails = ({ isOpen, closeModal, car }: CardDetailsProps) => {
   return <div>CardDetails</div>;
 };
 
