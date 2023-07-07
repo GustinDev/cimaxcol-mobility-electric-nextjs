@@ -2,9 +2,19 @@ import { CustomFilter, Hero, SearchBar } from '@/components';
 import CarCard from '@/components/CarCard';
 import { fetchCars } from '@/utils';
 import Image from 'next/image';
+import { HomeProps } from '@/types';
+import { fuels, yearsOfProduction } from '@/constants';
+import ShowMore from '@/components/ShowMore';
 
-export default async function Home() {
-  const allCars = await fetchCars();
+//SearchParams es de Next, busca querys en la utl.
+export default async function Home({ searchParams }: HomeProps) {
+  const allCars = await fetchCars({
+    manufacturer: searchParams.manufacturer || '',
+    year: searchParams.year || 2022,
+    fuel: searchParams.fuel || '',
+    limit: searchParams.limit || 10,
+    model: searchParams.model || '',
+  });
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
@@ -25,12 +35,12 @@ export default async function Home() {
           <SearchBar />
           <div className='home__filter-container'>
             <CustomFilter
-            // title='fuel'
-            // options={fuels}
+              title='fuel'
+              options={fuels}
             />
             <CustomFilter
-            // title='year'
-            // options={yearsOfProduction}
+              title='year'
+              options={yearsOfProduction}
             />
           </div>
         </div>
@@ -45,10 +55,10 @@ export default async function Home() {
               ))}
             </div>
 
-            {/* <ShowMore
-            pageNumber={(searchParams.limit || 10) / 10}
-            isNext={(searchParams.limit || 10) > allCars.length}
-          /> */}
+            <ShowMore
+              pageNumber={(searchParams.limit || 10) / 10}
+              isNext={(searchParams.limit || 10) > allCars.length}
+            />
           </section>
         ) : (
           <div className='home__error-container'>
