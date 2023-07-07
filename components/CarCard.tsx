@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { CarProps } from '@/types';
 import CustomButton from './CustomButtom';
-import { calculateCarRent } from '@/utils';
+import { calculateCarRent, generateCarImageUrl } from '@/utils';
 import CardDetails from './CardDetails';
 
 type Props = {};
@@ -40,7 +40,7 @@ const CarCard = ({ car }: CarCardProps) => {
 
       <div className='relative w-full h-40 my-3 object-contain'>
         <Image
-          src='/hero.png'
+          src={generateCarImageUrl(car)}
           alt='MotorbikeModel'
           fill
           priority
@@ -83,7 +83,7 @@ const CarCard = ({ car }: CarCardProps) => {
 
         <div className='car-card__btn-container'>
           <CustomButton
-            title='View More'
+            title='Ver Más'
             containerStyles='w-full py-[16px] rounded-full bg-primary-blue'
             textStyles='text-white text-[14px] leading-[17px] font-bold'
             rightIcon='/right-arrow.svg'

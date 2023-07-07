@@ -1,5 +1,7 @@
 //*Traer Data:
 
+import { CarProps } from '@/types';
+
 export async function fetchCars() {
   // Set the required headers for the API request
   const headers: HeadersInit = {
@@ -20,6 +22,20 @@ export async function fetchCars() {
 
   return result;
 }
+
+export const generateCarImageUrl = (car: CarProps, angle?: string) => {
+  const url = new URL('https://cdn.imagin.studio/getimage');
+  const { make, model, year } = car;
+
+  url.searchParams.append('customer', 'hrjavascript-mastery');
+  url.searchParams.append('make', make);
+  url.searchParams.append('modelFamily', model.split(' ')[0]);
+  url.searchParams.append('zoomType', 'fullscreen');
+  url.searchParams.append('modelYear', `${year}`);
+  url.searchParams.append('angle', `${angle}`);
+
+  return `${url}`;
+};
 
 //Rent Function:
 
