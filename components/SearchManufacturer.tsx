@@ -8,9 +8,12 @@ import Image from 'next/image';
 
 import { manufacturers } from '@/constants';
 
-type Props = {};
+type Props = {
+  selected: string;
+  setSelected: (filter: string) => void;
+};
 
-const SearchManufacturer = ({ selected, setSelected }) => {
+const SearchManufacturer = ({ selected, setSelected }: Props) => {
   const [query, setQuery] = useState('');
 
   const filteredManufacturers =

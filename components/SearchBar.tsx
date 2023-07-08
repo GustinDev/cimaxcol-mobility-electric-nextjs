@@ -20,14 +20,15 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
   </button>
 );
 
-type Props = {};
+type Props = {
+  setManufacturer: (manu: string) => void;
+  setModel: (manu: string) => void;
+};
 
-const SearchBar = ({ setManufacturer, setModel }) => {
+const SearchBar = ({ setManufacturer, setModel }: Props) => {
   const [searchManufacturer, setSearchManuFacturer] = useState('');
 
   const [searchModel, setSearchModel] = useState('');
-
-  const router = useRouter();
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
