@@ -10,10 +10,7 @@ import { manufacturers } from '@/constants';
 
 type Props = {};
 
-const SearchManufacturer = ({
-  manufacturer,
-  setManuFacturer,
-}: SearchManuFacturerProps) => {
+const SearchManufacturer = ({ selected, setSelected }) => {
   const [query, setQuery] = useState('');
 
   const filteredManufacturers =
@@ -29,8 +26,8 @@ const SearchManufacturer = ({
   return (
     <div className='search-manufacturer'>
       <Combobox
-        value={manufacturer}
-        onChange={setManuFacturer}
+        value={selected}
+        onChange={setSelected}
       >
         <div className='relative w-full'>
           {/* Button for the combobox. Click on the icon to see the complete dropdown */}
