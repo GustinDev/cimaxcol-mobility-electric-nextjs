@@ -36,8 +36,8 @@ const Contact = () => {
       <h1 className='text-center text-6xl font-bold mb-16'>CONTACTO</h1>
 
       {/* DATA */}
-      <div className='flex padding-x w-full md:w-3/4 lg:w-3/4 xl:w-4/6 mx-auto mb-16 '>
-        <div className='grow border-b-2 border-blue-600 pb-6 w-1/3'>
+      <div className='flex padding-x w-full md:w-full lg:w-3/4 xl:w-4/6 mx-auto mb-16 flex-col lg:flex-row'>
+        <div className='grow border-b-2 border-blue-600 py-8 w-full lg:w-1/3'>
           <p className='mb-2 font-bold text-3xl'>Información</p>
           <p className='text-neutral-800 text-xl'>Teléfono: 6023489128</p>
           <p className='text-neutral-800 text-xl'>Celular: 3182581421</p>
@@ -45,13 +45,13 @@ const Contact = () => {
             gerencia.teesasas <br className='flex md:hidden' /> @gmail.com
           </p>
         </div>
-        <div className='grow border-b-2 border-blue-600 pb-6 w-1/3'>
+        <div className='grow border-b-2 border-blue-600 pb-6 w-full lg:w-1/3 py-8'>
           <p className='mb-2 font-bold text-3xl'>Ubicación</p>
           <p className='text-neutral-800 text-xl'>Carrera 21 # 19a -03</p>
           <p className='text-neutral-800 text-xl'>Aranjuez, Cali, Colombia</p>
           <p className='text-neutral-800 text-xl'>Horarios: L-V 7:30 - 17:30</p>
         </div>
-        <div className='flex grow flex-col text-start border-b-2 border-blue-600 pb-6 w-1/6 '>
+        <div className='flex grow flex-col text-start border-b-2 border-blue-600 pb-6 w-full lg:w-1/3  justify-center lg:justify-start py-8'>
           <p className='mb-2 font-bold text-3xl'>Redes Sociales</p>
           <div className='flex justify-start gap-6 items-center '>
             <a
@@ -81,7 +81,7 @@ const Contact = () => {
         </div>
       </div>
       {/* FORM & MAP */}
-      <div className='w-full flex flex-row justify-center'>
+      <div className='w-full flex flex-col justify-center lg:flex-row items-center'>
         <div className=' padding-x w-full md:w-3/4 lg:w-2/4 xl:w-2/6 '>
           <h1 className='font-extrabold text-4xl'>
             ¿Quieres recibir más información?
