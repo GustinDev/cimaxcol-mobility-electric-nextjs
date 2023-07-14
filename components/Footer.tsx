@@ -40,6 +40,15 @@ const Footer = () => (
           >
             Juan Gustin
           </a>
+        </span>{' '}
+        y{' '}
+        <span className='underline cursor-pointer hover:font-semibold'>
+          <a
+            target='_blank'
+            href='https://www.linkedin.com/in/jhonnyzamsa/'
+          >
+            Jhonny Zambrano
+          </a>
         </span>
       </p>
     </div>

@@ -55,7 +55,7 @@ export default function Home() {
         id='discover'
       >
         <div className='home__text-container'>
-          <h1 className='text-4xl font-extrabold'>Novedades</h1>
+          <h1 className='text-4xl font-extrabold'>Catálogo</h1>
           <p>Te ayudaremos a encontrar la moto que más se acomode a ti.</p>
         </div>
 
@@ -114,12 +114,6 @@ export default function Home() {
             </h2>
           </div>
         )}
-
-        <div>
-          <h1 className='text-2xl text-center  font-bold mt-36'>
-            Demás cosas de hero, información general.
-          </h1>
-        </div>
       </div>
     </main>
   );
