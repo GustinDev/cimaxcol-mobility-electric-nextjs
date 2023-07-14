@@ -29,7 +29,7 @@ const Hero = (props: Props) => {
               className='object-contain'
             />
           </div>
-          <div className='hero__image-overlay' />
+          <div className='absolute xl:-top-24 lg:w-3/6  bg-hero-bg bg-repeat-round -z-10 w-full xl:h-full md:w-full h-[300px] mb-36 sm:m-0  md:h-[590px] overflow-hidden 2xl:-mr-[80px] xl:w-[850px] xl:mt-[100px] 2xl:mt-[180px] 2xl:h-[750px] 2xl:w-[950px]' />
         </div>
       </div>
     </div>
