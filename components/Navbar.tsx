@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import CustomButtom from './CustomButtom';
 import useMediaQuery from '@/hooks/useMediaQuery';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 type Props = {};
 
@@ -74,7 +75,7 @@ const Navbar = (props: Props) => {
             className='rounded-full bg-secondary-500 p-2'
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
-            BUTTON
+            <AiOutlineMenu style={{ fontWeight: 'bold', fontSize: '20px' }} />
           </button>
         )}
 
@@ -82,14 +83,14 @@ const Navbar = (props: Props) => {
         {!isAboveMediumScreens && !isMenuToggled && (
           <div className='fixed bottom-0 right-0 z-40 h-full w-[200px] md:w-[300px] bg-primary-100 drop-shadow-xl'>
             {/* CLOSE ICON */}
-            <div className='flex justify-end p-12 bg-red-200'>
+            <div className='flex justify-end p-12 bg-blue-800'>
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                X
+                <AiOutlineClose style={{ color: 'white', fontSize: '20px' }} />
               </button>
             </div>
 
             {/* MENU ITEMS */}
-            <div className=' flex flex-col gap-10 text-2xl bg-red-200 h-full z-50'>
+            <div className=' flex flex-col gap-10 text-2xl bg-blue-800 h-full z-50'>
               <div
                 className={`text-md flex w-full flex-col items-center gap-8 font-bold`}
               >
@@ -100,7 +101,7 @@ const Navbar = (props: Props) => {
                   <CustomButtom
                     title='Inicio'
                     btnType='button'
-                    containerStyles='text-primary-blue rounded-full  w-[90px] hover:font-semibold '
+                    containerStyles='text-white rounded-full  w-[90px] hover:font-semibold '
                   />
                 </Link>
                 <Link
@@ -110,7 +111,7 @@ const Navbar = (props: Props) => {
                   <CustomButtom
                     title='Ingresar'
                     btnType='button'
-                    containerStyles='text-primary-blue rounded-full  w-[90px] hover:font-semibold'
+                    containerStyles='text-white rounded-full  w-[90px] hover:font-semibold'
                   />
                 </Link>
                 <Link
@@ -120,7 +121,7 @@ const Navbar = (props: Props) => {
                   <CustomButtom
                     title='Contacto'
                     btnType='button'
-                    containerStyles='text-primary-blue rounded-full  w-[90px] hover:font-semibold'
+                    containerStyles='text-white rounded-full  w-[90px] hover:font-semibold'
                   />
                 </Link>
                 <Link
@@ -130,7 +131,7 @@ const Navbar = (props: Props) => {
                   <CustomButtom
                     title='Nosotros'
                     btnType='button'
-                    containerStyles='text-primary-blue rounded-full  w-[90px] hover:font-semibold'
+                    containerStyles='text-white rounded-full  w-[90px] hover:font-semibold'
                   />
                 </Link>
               </div>
