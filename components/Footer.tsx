@@ -38,7 +38,7 @@ const Footer = () => (
             target='_blank'
             href='https://gustindev.github.io/developer-portfolio/'
           >
-            Juan Gustin
+            Juan David Gustin
           </a>
         </span>{' '}
         y{' '}
